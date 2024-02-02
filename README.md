@@ -1,6 +1,4 @@
-# cloudresume
-
-Certainly! Here's the provided text converted into a step-by-step list in Markdown:
+# Cloud Resume Project
 
 ### CHUNK 1: Setting Up Resume Hosting
 
