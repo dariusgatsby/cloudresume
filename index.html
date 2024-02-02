@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<div class="resume">
+    <p id="result" class="banner">Loading...</p>
+        <h2 class="center-text">Darius Daugherty</h2>
+  <p class="center-text"><a href="mailto:dariusid08@gmail.com?subject=From%20cloud%20resume%20site">dariusid08@gmail.com</a></p>
+    <p class="center-text">(213)-300-3141</p>
+        <p class="center-text"><strong>Solutions Architect</strong></p>
+
+        <h1>Professional Summary</h1>
+        <p class="indented">As an aspiring Solutions Architect in the AWS environment with a Security+ certification and AWS Solutions Architect Associate. I bring a unique blend of cloud expertise and cybersecurity knowledge to the table. My passion lies in leveraging technology to solve complex business challenges. With experience as a lead expeditor in a high-pressure kitchen, I've honed my communication skills, enabling me to effectively collaborate and translate technical solutions into actionable business strategies. I am committed to designing and implementing secure, efficient, and scalable AWS solutions that drive success for organizations while ensuring the highest level of data protection and compliance. As a life-long learner I hope to continually improve myself and the people around me.</p>
+
+        <h1>Skills</h1>
+        <ul>
+            <li>Task Prioritization and Time Management</li>
+            <li>Communication with team and stakeholders</li>
+            <li>Active Listening</li>
+          <li>Foundational Python</li>
+          <li>AWS Core Services</li>
+          <li>Cybersecurity Principles</li>
+            <li>Well Architected Frameworks</li>
+        </ul>
+
+        <h1>Work Experience</h1>
+    <ul>
+        <li>
+            <p><strong>Bacari Silverlake</strong></p>
+            <p>Lead Expo | 2021 - December 2023</p>
+            <p class="indented">As Lead Expo my job is to act as a network firewall and router for food in the kitchen. I am responsible for ensuring the food is cooked and plated properly (if not I send it back), accounted for in our digital ticket system so that the same dish is not made twice, and communicate with both Back of House and Front of House to deliver food to the proper tables in a timely manner. In times of extreme business I maintain my ability to think clearly and effectively, acting as the glue that assures mission-critical services are continually executed.</p>
+        </li>
+        <li>
+          <p><strong>Spectrum</strong></p>
+          <p class="indented">Sales Associate | May 2021 - July 2021</p>
+          <p>As a Sales Associate for Spectrum I was tasked with managing my own work flows and leads. Once I plotted out where I would start from my list of given leads I would then go door to door attempting to educate customers on new offerings and services. This role taught me dedication and perseverance through adversity.</p>
+    </ul>
+
+        <h1>Certifications</h1>
+        <ul>
+            <li>
+                <p><strong>Security+</strong></p>
+                <p>CompTIA | 10/22/2023</p>
+            </li>
+            <li>
+              <p><strong>AWS Solutions Architect</strong></p>
+              <p>Amazon Web Services | 12/13/2023</p>
+            <li>
+            <p><strong>Certified Cloud Practitioner</strong></p>
+              <p>Amazon Web Services | 10/31/2023</p>
+            </li>
+        </ul>
+    </div>
+    <script>
+        const apiUrl = 'https://cyzy70v8ai.execute-api.us-east-1.amazonaws.com/test/DDBManager';
+    
+        // Make a GET request to the API
+        fetch(apiUrl)
+            .then(response => {
+                // Check if the response status is OK (200)
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                // Parse the JSON response
+                return response.json();
+            })
+            .then(dataArray => {
+                const data = dataArray[0];
+                // Handle the JSON data
+                console.log('API Response:', data);
+    
+                // Use the updated value as needed
+                // For example, update the UI with the received data
+                const updatedVisitCount = data.body.updated_visit_count;
+                document.getElementById('result').innerText = `All-Time Visits: ${updatedVisitCount}`;
+            })
+            .catch(error => {
+                // Handle any errors that occurred during the fetch
+                console.error('Fetch Error:', error);
+            });
+    </script>
+    
+ 
+    
+</body>
+
