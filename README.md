@@ -1,7 +1,5 @@
 # cloudresume
 
-Certainly! Here's the provided text converted into a step-by-step list in Markdown:
-
 ### CHUNK 1: Setting Up Resume Hosting
 
 1. **Frontend Development:**
