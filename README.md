@@ -1,4 +1,4 @@
-# cloudresume
+# Cloud Resume Project
 
 ### CHUNK 1: Setting Up Resume Hosting
 
